@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#4F46E5">
+    <meta name="description" content="教育平权社区 - 让每个人都能公平获得优质教育资源，高考资源分享，智能体创建平台">
+    <meta name="keywords" content="高考,教育平权,学习资源,智能体,社区,备考,高考真题,高考复习,在线学习">
+    <meta name="author" content="教育平权社区">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://eduequity.netlify.app/">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="教育平权社区">
+    <meta property="og:title" content="教育平权社区 - 高考资源·智能体·教育公平">
+    <meta property="og:description" content="让每个人都能公平获得优质教育资源，汇集高考真题、智能体创建、社区交流">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eduequity.netlify.app/">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="教育平权社区">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="教育平权社区">
+    <meta name="twitter:description" content="让每个人都能公平获得优质教育资源">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>教育平权社区 - 高考资源·智能体·教育公平</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "教育平权社区",
+        "url": "https://eduequity.netlify.app/",
+        "description": "让每个人都能公平获得优质教育资源",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://eduequity.netlify.app/#search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "教育平权社区",
+        "url": "https://eduequity.netlify.app/",
+        "logo": "https://eduequity.netlify.app/icons/icon-512.png",
+        "sameAs": [],
+        "description": "致力于教育公平，为所有学子提供优质教育资源"
+    }
+    </script>
+</head>
+<body>
+    <div id="app">
+        <div class="splash-screen" id="splashScreen">
+            <div class="splash-content">
+                <div class="splash-icon">📚</div>
+                <div class="splash-title">教育平权社区</div>
+                <div class="splash-loading">
+                    <div class="loading-bar"></div>
+                </div>
+            </div>
+        </div>
+
+        <header class="header" id="header">
+            <div class="header-content">
+                <div class="logo" data-page="home">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">教育平权</span>
+                </div>
+                
+                <div class="search-bar" id="searchBar">
+                    <input type="text" class="search-input" id="searchInput" placeholder="搜索帖子、资源、智能体...">
+                    <button class="search-btn" id="searchBtn">🔍</button>
+                </div>
+
+                <nav class="nav-desktop">
+                    <a href="#" class="nav-link active" data-page="home">首页</a>
+                    <a href="#" class="nav-link" data-page="community">社区</a>
+                    <a href="#" class="nav-link" data-page="agents">智能体</a>
+                    <a href="#" class="nav-link" data-page="gaokao">高考资源</a>
+                    <a href="#" class="nav-link" data-page="equity">教育平权</a>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="btn-icon notification-btn" id="notificationBtn" title="通知">
+                        🔔
+                        <span class="notification-badge" id="notificationBadge">3</span>
+                    </button>
+                    <button class="btn-icon" id="themeToggle" title="切换主题">🌙</button>
+                    <button class="btn-icon" id="profileBtn" title="个人中心">👤</button>
+                    <button class="btn-primary" id="loginBtn">登录</button>
+                    <button class="menu-toggle" id="menuToggle">☰</button>
+                </div>
+            </div>
+        </header>
+
+        <nav class="nav-mobile" id="mobileNav">
+            <div class="mobile-search">
+                <input type="text" class="search-input" placeholder="搜索...">
+            </div>
+            <a href="#" class="nav-link active" data-page="home">🏠 首页</a>
+            <a href="#" class="nav-link" data-page="community">💬 社区</a>
+            <a href="#" class="nav-link" data-page="agents">🤖 智能体</a>
+            <a href="#" class="nav-link" data-page="gaokao">📚 高考资源</a>
+            <a href="#" class="nav-link" data-page="equity">⚖️ 教育平权</a>
+            <a href="#" class="nav-link" data-page="profile">👤 个人中心</a>
+            <a href="#" class="nav-link" data-page="settings">⚙️ 设置</a>
+        </nav>
+
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-results-container">
+                <div class="search-header">
+                    <input type="text" class="search-input-large" id="searchInputLarge" placeholder="搜索帖子、资源、智能体...">
+                    <button class="search-close" id="searchClose">✕</button>
+                </div>
+                <div class="search-tabs">
+                    <button class="search-tab active" data-search="all">全部</button>
+                    <button class="search-tab" data-search="posts">帖子</button>
+                    <button class="search-tab" data-search="agents">智能体</button>
+                    <button class="search-tab" data-search="resources">资源</button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+            </div>
+        </div>
+
+        <main class="main-content">
+            <section id="page-home" class="page active">
+                <div class="hero">
+                    <div class="hero-bg"></div>
+                    <div class="hero-content">
+                        <div class="hero-badge">🎉 已帮助 10万+ 学子</div>
+                        <h1 class="hero-title">教育平权，人人共享</h1>
+                        <p class="hero-subtitle">打破教育资源壁垒，让每个学子都能获得公平的教育机会</p>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="12580">0</span>
+                                <span class="stat-label">社区成员</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="3520">0</span>
+                                <span class="stat-label">分享帖子</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="156">0</span>
+                                <span class="stat-label">智能体</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="8920">0</span>
+                                <span class="stat-label">学习资源</span>
+                            </div>
+                        </div>
+                        <div class="hero-actions">
+                            <button class="btn-large btn-primary" data-page="community">
+                                <span>加入社区</span>
+                                <span class="btn-arrow">→</span>
+                            </button>
+                            <button class="btn-large btn-outline" data-page="agents">
+                                <span>创建智能体</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <div class="quick-action-card" data-page="community">
+                        <div class="quick-icon">💬</div>
+                        <div class="quick-text">发帖交流</div>
+                    </div>
+                    <div class="quick-action-card" data-page="agents">
+                        <div class="quick-icon">🤖</div>
+                        <div class="quick-text">AI助手</div>
+                    </div>
+                    <div class="quick-action-card" data-page="gaokao">
+                        <div class="quick-icon">📚</div>
+                        <div class="quick-text">学习资源</div>
+                    </div>
+                    <div class="quick-action-card" data-page="equity">
+                        <div class="quick-icon">❤️</div>
+                        <div class="quick-text">志愿活动</div>
+                    </div>
+                </div>
+
+                <div class="section-container study-dashboard-home">
+                    <div class="section-header">
+                        <h2 class="section-title">📊 学习统计</h2>
+                        <a href="#" class="section-more" data-page="profile">详细报告 →</a>
+                    </div>
+                    <div class="study-dashboard-grid" id="homeStudyStats">
+                        <div class="study-stat-card">
+                            <div class="study-stat-icon">⏱️</div>
+                            <div class="study-stat-info">
+                                <div class="study-stat-value" id="homeTodayHours">0</div>
+                                <div class="study-stat-label">今日学习(小时)</div>
+                            </div>
+                        </div>
+                        <div class="study-stat-card">
+                            <div class="study-stat-icon">🔥</div>
+                            <div class="study-stat-info">
+                                <div class="study-stat-value" id="homeStreak">0</div>
+                                <div class="study-stat-label">连续学习(天)</div>
+                            </div>
+                        </div>
+                        <div class="study-stat-card">
+                            <div class="study-stat-icon">📖</div>
+                            <div class="study-stat-info">
+                                <div class="study-stat-value" id="homeResources">0</div>
+                                <div class="study-stat-label">学习资源</div>
+                            </div>
+                        </div>
+                        <div class="study-stat-card">
+                            <div class="study-stat-icon">🎯</div>
+                            <div class="study-stat-info">
+                                <div class="study-stat-value" id="homeGoals">0%</div>
+                                <div class="study-stat-label">目标完成</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="study-chart-home" id="homeWeeklyChart"></div>
+                </div>
+
+                <div class="section-container">
+                    <div class="section-header">
+                        <h2 class="section-title">热门智能体</h2>
+                        <a href="#" class="section-more" data-page="agents">查看全部 →</a>
+                    </div>
+                    <div class="agents-featured" id="featuredAgents"></div>
+                </div>
+
+                <div class="section-container">
+                    <div class="section-header">
+                        <h2 class="section-title">最新动态</h2>
+                    </div>
+                    <div class="recent-tabs">
+                        <button class="tab-btn active" data-tab="posts">热门帖子</button>
+                        <button class="tab-btn" data-tab="agents">新智能体</button>
+                        <button class="tab-btn" data-tab="resources">新资源</button>
+                    </div>
+                    <div class="recent-content" id="recentContent"></div>
+                </div>
+
+                <div class="section-container">
+                    <div class="section-header">
+                        <h2 class="section-title">平台特色</h2>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">🎓</div>
+                            <h3>高考资源库</h3>
+                            <p>汇集全国各地高考真题、模拟题、复习资料，助力学子备考</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🤖</div>
+                            <h3>智能体创建</h3>
+                            <p>创建专属AI智能体，辅助学习、答疑解惑、知识管理</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">💬</div>
+                            <h3>互动社区</h3>
+                            <p>与全国学子交流学习心得，分享备考经验，互帮互助</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">⚖️</div>
+                            <h3>教育平权</h3>
+                            <p>关注教育公平，为欠发达地区学子提供优质教育资源</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="page-community" class="page">
+                <div class="page-header">
+                    <h1>社区广场</h1>
+                    <p>分享学习心得，交流备考经验</p>
+                </div>
+                
+                <div class="community-layout">
+                    <aside class="community-sidebar">
+                        <div class="sidebar-card user-card" id="userCard">
+                            <div class="user-card-guest">
+                                <div class="guest-avatar">👤</div>
+                                <p>登录后参与讨论</p>
+                                <button class="btn-primary btn-full" onclick="Modal.open('loginModal')">登录/注册</button>
+                            </div>
+                        </div>
+                        
+                        <div class="sidebar-card">
+                            <h3>话题分类</h3>
+                            <ul class="category-list">
+                                <li class="category-item active" data-category="all">
+                                    <span class="category-icon">📋</span>
+                                    <span>全部话题</span>
+                                    <span class="category-count" id="countAll">0</span>
+                                </li>
+                                <li class="category-item" data-category="gaokao">
+                                    <span class="category-icon">🎓</span>
+                                    <span>高考备考</span>
+                                    <span class="category-count" id="countGaokao">0</span>
+                                </li>
+                                <li class="category-item" data-category="experience">
+                                    <span class="category-icon">💡</span>
+                                    <span>学习经验</span>
+                                    <span class="category-count" id="countExperience">0</span>
+                                </li>
+                                <li class="category-item" data-category="resources">
+                                    <span class="category-icon">📦</span>
+                                    <span>资源分享</span>
+                                    <span class="category-count" id="countResources">0</span>
+                                </li>
+                                <li class="category-item" data-category="questions">
+                                    <span class="category-icon">❓</span>
+                                    <span>问答求助</span>
+                                    <span class="category-count" id="countQuestions">0</span>
+                                </li>
+                                <li class="category-item" data-category="equity">
+                                    <span class="category-icon">⚖️</span>
+                                    <span>教育平权</span>
+                                    <span class="category-count" id="countEquity">0</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-card">
+                            <h3>热门标签</h3>
+                            <div class="tag-cloud" id="tagCloud"></div>
+                        </div>
+
+                        <div class="sidebar-card">
+                            <h3>活跃用户</h3>
+                            <div class="active-users" id="activeUsers"></div>
+                        </div>
+                    </aside>
+
+                    <div class="community-main">
+                        <div class="post-editor" id="postEditor">
+                            <div class="editor-header">
+                                <div class="editor-avatar" id="editorAvatar">👤</div>
+                                <textarea class="post-textarea" id="postInput" placeholder="分享你的想法、经验或问题..."></textarea>
+                            </div>
+                            <div class="editor-toolbar">
+                                <div class="editor-tools">
+                                    <button class="tool-btn" title="添加图片">🖼️</button>
+                                    <button class="tool-btn" title="添加代码">💻</button>
+                                    <button class="tool-btn" title="添加链接">🔗</button>
+                                    <button class="tool-btn" title="添加表情">😊</button>
+                                </div>
+                                <div class="editor-meta">
+                                    <select class="category-select" id="postCategory">
+                                        <option value="gaokao">高考备考</option>
+                                        <option value="experience">学习经验</option>
+                                        <option value="resources">资源分享</option>
+                                        <option value="questions">问答求助</option>
+                                        <option value="equity">教育平权</option>
+                                    </select>
+                                    <button class="btn-primary" id="publishBtn">发布</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="posts-filter">
+                            <button class="filter-btn active" data-filter="latest">🕐 最新</button>
+                            <button class="filter-btn" data-filter="hot">🔥 热门</button>
+                            <button class="filter-btn" data-filter="following">⭐ 关注</button>
+                        </div>
+
+                        <div class="posts-list" id="postsList"></div>
+                        
+                        <div class="load-more" id="loadMorePosts">
+                            <button class="btn-secondary btn-full">加载更多</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="page-agents" class="page">
+                <div class="page-header">
+                    <h1>智能体中心</h1>
+                    <p>创建你的专属AI助手，辅助学习与成长</p>
+                </div>
+
+                <div class="agents-header">
+                    <div class="agents-search">
+                        <input type="text" class="search-input" id="agentSearch" placeholder="搜索智能体...">
+                    </div>
+                    <button class="btn-primary btn-large" id="createAgentBtn">+ 创建智能体</button>
+                </div>
+
+                <div class="agents-categories">
+                    <button class="agent-cat-btn active" data-type="all">全部</button>
+                    <button class="agent-cat-btn" data-type="tutor">📚 学习辅导</button>
+                    <button class="agent-cat-btn" data-type="qa">❓ 问答助手</button>
+                    <button class="agent-cat-btn" data-type="planner">📅 学习规划</button>
+                    <button class="agent-cat-btn" data-type="motivator">💚 心理辅导</button>
+                    <button class="agent-cat-btn" data-type="custom">⚡ 自定义</button>
+                </div>
+
+                <div class="agents-grid" id="agentsGrid"></div>
+            </section>
+
+            <section id="page-gaokao" class="page">
+                <div class="page-header">
+                    <h1>高考资源中心</h1>
+                    <p>汇集优质高考资源，助力学子圆梦</p>
+                </div>
+
+                <div class="resource-stats">
+                    <div class="resource-stat">
+                        <span class="resource-stat-num">12,580</span>
+                        <span class="resource-stat-label">资源总数</span>
+                    </div>
+                    <div class="resource-stat">
+                        <span class="resource-stat-num">89,230</span>
+                        <span class="resource-stat-label">下载次数</span>
+                    </div>
+                    <div class="resource-stat">
+                        <span class="resource-stat-num">9</span>
+                        <span class="resource-stat-label">科目覆盖</span>
+                    </div>
+                </div>
+
+                <div class="resource-filter">
+                    <div class="filter-group">
+                        <label>科目</label>
+                        <select class="filter-select" id="subjectFilter">
+                            <option value="all">全部科目</option>
+                            <option value="chinese">语文</option>
+                            <option value="math">数学</option>
+                            <option value="english">英语</option>
+                            <option value="physics">物理</option>
+                            <option value="chemistry">化学</option>
+                            <option value="biology">生物</option>
+                            <option value="politics">政治</option>
+                            <option value="history">历史</option>
+                            <option value="geography">地理</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>类型</label>
+                        <select class="filter-select" id="typeFilter">
+                            <option value="all">全部类型</option>
+                            <option value="past">历年真题</option>
+                            <option value="mock">模拟试题</option>
+                            <option value="notes">复习笔记</option>
+                            <option value="video">视频课程</option>
+                            <option value="tips">备考技巧</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>地区</label>
+                        <select class="filter-select" id="provinceFilter">
+                            <option value="all">全部地区</option>
+                            <option value="national">全国卷</option>
+                            <option value="beijing">北京</option>
+                            <option value="shanghai">上海</option>
+                            <option value="guangdong">广东</option>
+                            <option value="jiangsu">江苏</option>
+                            <option value="zhejiang">浙江</option>
+                            <option value="shandong">山东</option>
+                            <option value="henan">河南</option>
+                            <option value="sichuan">四川</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="resources-grid" id="resourcesGrid"></div>
+            </section>
+
+            <section id="page-equity" class="page">
+                <div class="page-header">
+                    <h1>教育平权行动</h1>
+                    <p>让每个孩子都能享受公平优质的教育</p>
+                </div>
+
+                <div class="equity-hero">
+                    <div class="equity-hero-content">
+                        <h2>我们的使命</h2>
+                        <p>教育是改变命运的钥匙，但教育资源的不均衡分配让许多孩子失去了公平竞争的机会。我们致力于通过技术手段，打破地域、经济壁垒，让优质教育资源触手可及。</p>
+                        <div class="equity-mission-stats">
+                            <div class="mission-stat">
+                                <span class="mission-stat-icon">🏫</span>
+                                <span class="mission-stat-num">50,000+</span>
+                                <span class="mission-stat-label">偏远地区学校</span>
+                            </div>
+                            <div class="mission-stat">
+                                <span class="mission-stat-icon">👨‍🎓</span>
+                                <span class="mission-stat-num">100万+</span>
+                                <span class="mission-stat-label">受益学生</span>
+                            </div>
+                            <div class="mission-stat">
+                                <span class="mission-stat-icon">📚</span>
+                                <span class="mission-stat-num">10万+</span>
+                                <span class="mission-stat-label">共享资源</span>
+                            </div>
+                            <div class="mission-stat">
+                                <span class="mission-stat-icon">🤝</span>
+                                <span class="mission-stat-num">5,000+</span>
+                                <span class="mission-stat-label">志愿者</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="equity-actions-section">
+                    <h2 class="section-title">参与行动</h2>
+                    <div class="action-cards">
+                        <div class="action-card">
+                            <div class="action-icon">📖</div>
+                            <h3>资源捐赠</h3>
+                            <p>分享你的学习资料、笔记、真题，帮助更多学子获得优质学习资源</p>
+                            <button class="btn-primary" data-page="community">立即分享</button>
+                        </div>
+                        <div class="action-card">
+                            <div class="action-icon">🎓</div>
+                            <h3>在线辅导</h3>
+                            <p>成为志愿者导师，为偏远地区学生提供在线辅导，传递知识的力量</p>
+                            <button class="btn-secondary" id="volunteerBtn">报名参加</button>
+                        </div>
+                        <div class="action-card">
+                            <div class="action-icon">🤖</div>
+                            <h3>智能助学</h3>
+                            <p>创建教育智能体，为学生提供24小时答疑服务，让学习不再孤单</p>
+                            <button class="btn-secondary" data-page="agents">创建智能体</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="equity-stories-section">
+                    <h2 class="section-title">真实故事</h2>
+                    <div class="stories-list" id="storiesList"></div>
+                </div>
+
+                <div class="equity-partners">
+                    <h2 class="section-title">合作伙伴</h2>
+                    <div class="partners-grid">
+                        <div class="partner-item">🏫 希望工程</div>
+                        <div class="partner-item">📚 免费午餐</div>
+                        <div class="partner-item">🎓 美丽中国</div>
+                        <div class="partner-item">❤️ 中国教育发展基金会</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="page-profile" class="page">
+                <div class="page-header">
+                    <h1>个人中心</h1>
+                    <p>管理你的学习数据和账户信息</p>
+                </div>
+
+                <div class="profile-container">
+                    <div class="profile-card">
+                        <div class="profile-header">
+                            <div class="profile-avatar" id="profileAvatar">👤</div>
+                            <div class="profile-info">
+                                <h2 id="profileName">未登录</h2>
+                                <p id="profileRole">点击登录开始使用</p>
+                            </div>
+                            <button class="btn-secondary" id="editProfileBtn">编辑资料</button>
+                        </div>
+                        <div class="profile-stats">
+                            <div class="profile-stat">
+                                <span class="profile-stat-value" id="profilePosts">0</span>
+                                <span class="profile-stat-label">发布帖子</span>
+                            </div>
+                            <div class="profile-stat">
+                                <span class="profile-stat-value" id="profileAgents">0</span>
+                                <span class="profile-stat-label">创建智能体</span>
+                            </div>
+                            <div class="profile-stat">
+                                <span class="profile-stat-value" id="profileFavorites">0</span>
+                                <span class="profile-stat-label">收藏内容</span>
+                            </div>
+                            <div class="profile-stat">
+                                <span class="profile-stat-value" id="profileLikes">0</span>
+                                <span class="profile-stat-label">获得点赞</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-section">
+                        <h3 class="profile-section-title">学习数据</h3>
+                        <div id="profileStudyStats"></div>
+                    </div>
+
+                    <div class="profile-section">
+                        <h3 class="profile-section-title">我的收藏</h3>
+                        <div class="profile-tabs">
+                            <button class="profile-tab active" data-tab="favorites-posts">帖子</button>
+                            <button class="profile-tab" data-tab="favorites-agents">智能体</button>
+                            <button class="profile-tab" data-tab="favorites-resources">资源</button>
+                        </div>
+                        <div id="profileFavorites" class="profile-favorites-list"></div>
+                    </div>
+
+                    <div class="profile-section">
+                        <h3 class="profile-section-title">我的帖子</h3>
+                        <div id="profileMyPosts" class="profile-posts-list"></div>
+                    </div>
+
+                    <div class="profile-section">
+                        <h3 class="profile-section-title">我的智能体</h3>
+                        <div id="profileMyAgents" class="profile-agents-list"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="page-settings" class="page">
+                <div class="page-header">
+                    <h1>设置</h1>
+                    <p>自定义你的使用体验</p>
+                </div>
+
+                <div class="settings-container">
+                    <div class="settings-section">
+                        <h3 class="settings-section-title">外观</h3>
+                        <div class="settings-list">
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <span class="settings-item-title">主题模式</span>
+                                    <span class="settings-item-desc">选择浅色或深色主题</span>
+                                </div>
+                                <div class="settings-item-control">
+                                    <div class="theme-selector">
+                                        <button class="theme-option active" data-theme="light">☀️ 浅色</button>
+                                        <button class="theme-option" data-theme="dark">🌙 深色</button>
+                                        <button class="theme-option" data-theme="auto">🔄 自动</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <span class="settings-item-title">字体大小</span>
+                                    <span class="settings-item-desc">调整界面字体大小</span>
+                                </div>
+                                <div class="settings-item-control">
+                                    <select class="settings-select" id="fontSizeSelect">
+                                        <option value="small">小</option>
+                                        <option value="medium" selected>中</option>
+                                        <option value="large">大</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <span class="settings-item-title">主题预设</span>
+                                    <span class="settings-item-desc">选择预设配色方案</span>
+                                </div>
+                                <div class="settings-item-control">
+                                    <div class="theme-presets">
+                                        <button class="theme-preset-btn active" data-preset="default" style="background: #4F46E5">默认</button>
+                                        <button class="theme-preset-btn" data-preset="ocean" style="background: #0891B2">海洋</button>
+                                        <button class="theme-preset-btn" data-preset="sunset" style="background: #DC2626">日落</button>
+                                        <button class="theme-preset-btn" data-preset="forest" style="background: #059669">森林</button>
+                                        <button class="theme-preset-btn" data-preset="midnight" style="background: #6366F1">午夜</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <span class="settings-item-title">自定义颜色</span>
+                                    <span class="settings-item-desc">个性化主题颜色</span>
+                                </div>
+                                <div class="settings-item-control">
+                                    <div class="color-pickers">
+                                        <div class="color-picker-item">
+                                            <label>主色</label>
+                                            <input type="color" id="customColorPrimary" value="#4F46E5">
+                                        </div>
+                                        <div class="color-picker-item">
+                                            <label>辅助色</label>
+                                            <input type="color" id="customColorSecondary" value="#10B981">
+                                        </div>
+                                        <div class="color-picker-item">
+                                            <label>强调色</label>
+                                            <input type="color" id="customColorAccent" value="#F59E0B">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3 class="settings-section-title">通知</h3>
+                        <div class="settings-list">
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <span class="settings-item-title">推送通知</span>
+                                    <span class="settings-item-desc">接收新消息和活动通知</span>
+                                </div>
+                                <div class="settings-item-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="pushNotifications" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <span class="settings-item-title">声音提醒</span>
+                                    <span class="settings-item-desc">收到通知时播放声音</span>
+                                </div>
+                                <div class="settings-item-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="soundNotifications" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <span class="settings-item-title">邮件通知</span>
+                                    <span class="settings-item-desc">接收重要更新邮件</span>
+                                </div>
+                                <div class="settings-item-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="emailNotifications">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3 class="settings-section-title">隐私</h3>
+                        <div class="settings-list">
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <span class="settings-item-title">公开个人资料</span>
+                                    <span class="settings-item-desc">允许其他用户查看你的资料</span>
+                                </div>
+                                <div class="settings-item-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="publicProfile" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <span class="settings-item-title">显示学习数据</span>
+                                    <span class="settings-item-desc">在个人页面展示学习统计</span>
+                                </div>
+                                <div class="settings-item-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="showStudyData" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3 class="settings-section-title">数据管理</h3>
+                        <div class="settings-list">
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <span class="settings-item-title">导出数据</span>
+                                    <span class="settings-item-desc">下载你的所有数据</span>
+                                </div>
+                                <div class="settings-item-control">
+                                    <button class="btn-secondary btn-sm" id="exportDataBtn">导出</button>
+                                </div>
+                            </div>
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <span class="settings-item-title">导入数据</span>
+                                    <span class="settings-item-desc">从备份文件恢复数据</span>
+                                </div>
+                                <div class="settings-item-control">
+                                    <button class="btn-secondary btn-sm" id="importDataBtn">导入</button>
+                                    <input type="file" id="importDataFile" accept=".json" style="display:none">
+                                </div>
+                            </div>
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <span class="settings-item-title">清除缓存</span>
+                                    <span class="settings-item-desc">清除本地缓存数据</span>
+                                </div>
+                                <div class="settings-item-control">
+                                    <button class="btn-secondary btn-sm" id="clearCacheBtn">清除</button>
+                                </div>
+                            </div>
+                            <div class="settings-item danger">
+                                <div class="settings-item-info">
+                                    <span class="settings-item-title">删除账户</span>
+                                    <span class="settings-item-desc">永久删除你的账户和数据</span>
+                                </div>
+                                <div class="settings-item-control">
+                                    <button class="btn-danger btn-sm" id="deleteAccountBtn">删除</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3 class="settings-section-title">关于</h3>
+                        <div class="settings-list">
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <span class="settings-item-title">版本</span>
+                                    <span class="settings-item-desc">v2.0.0</span>
+                                </div>
+                            </div>
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <span class="settings-item-title">服务条款</span>
+                                </div>
+                                <div class="settings-item-control">
+                                    <span class="settings-arrow">→</span>
+                                </div>
+                            </div>
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <span class="settings-item-title">隐私政策</span>
+                                </div>
+                                <div class="settings-item-control">
+                                    <span class="settings-arrow">→</span>
+                                </div>
+                            </div>
+                            <div class="settings-item">
+                                <div class="settings-item-info">
+                                    <span class="settings-item-title">开源许可</span>
+                                </div>
+                                <div class="settings-item-control">
+                                    <span class="settings-arrow">→</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">📚</span>
+                        <span class="logo-text">教育平权社区</span>
+                    </div>
+                    <p>致力于打破教育资源壁垒，让每个学子都能获得公平的教育机会。</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">微信</a>
+                        <a href="#" class="social-link">微博</a>
+                        <a href="#" class="social-link">知乎</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <a href="#" data-page="community">社区</a>
+                    <a href="#" data-page="agents">智能体</a>
+                    <a href="#" data-page="gaokao">高考资源</a>
+                    <a href="#" data-page="equity">教育平权</a>
+                </div>
+                <div class="footer-section">
+                    <h4>帮助中心</h4>
+                    <a href="#">使用指南</a>
+                    <a href="#">常见问题</a>
+                    <a href="#">意见反馈</a>
+                    <a href="#">联系我们</a>
+                </div>
+                <div class="footer-section">
+                    <h4>关于我们</h4>
+                    <p>邮箱：contact@eduequity.com</p>
+                    <p>社区交流群：教育平权社区</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 教育平权社区 - 让教育更公平</p>
+            </div>
+        </footer>
+
+        <button class="back-to-top" id="backToTop" title="返回顶部">↑</button>
+    </div>
+
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>登录 / 注册</h2>
+                <button class="modal-close" onclick="Modal.close('loginModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="login-tabs">
+                    <button class="login-tab active" data-tab="login">登录</button>
+                    <button class="login-tab" data-tab="register">注册</button>
+                </div>
+                <form id="loginForm" class="auth-form">
+                    <div class="form-group">
+                        <label>用户名</label>
+                        <input type="text" id="loginUsername" placeholder="请输入用户名" required>
+                    </div>
+                    <div class="form-group">
+                        <label>密码</label>
+                        <input type="password" id="loginPassword" placeholder="请输入密码" required>
+                    </div>
+                    <button type="submit" class="btn-primary btn-full">登录</button>
+                </form>
+                <form id="registerForm" class="auth-form" style="display:none;">
+                    <div class="form-group">
+                        <label>用户名</label>
+                        <input type="text" id="regUsername" placeholder="请输入用户名" required>
+                    </div>
+                    <div class="form-group">
+                        <label>邮箱</label>
+                        <input type="email" id="regEmail" placeholder="请输入邮箱" required>
+                    </div>
+                    <div class="form-group">
+                        <label>密码</label>
+                        <input type="password" id="regPassword" placeholder="请输入密码" required>
+                    </div>
+                    <div class="form-group">
+                        <label>身份</label>
+                        <select id="regRole">
+                            <option value="student">学生</option>
+                            <option value="teacher">教师</option>
+                            <option value="parent">家长</option>
+                            <option value="volunteer">志愿者</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary btn-full">注册</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="agentModal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2>创建智能体</h2>
+                <button class="modal-close" onclick="Modal.close('agentModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="agentForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>智能体名称 *</label>
+                            <input type="text" id="agentName" placeholder="给你的智能体起个名字" required>
+                        </div>
+                        <div class="form-group">
+                            <label>类型 *</label>
+                            <select id="agentType">
+                                <option value="tutor">学习辅导</option>
+                                <option value="qa">问答助手</option>
+                                <option value="planner">学习规划</option>
+                                <option value="motivator">心理辅导</option>
+                                <option value="custom">自定义</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>头像</label>
+                        <div class="avatar-selector" id="avatarSelector">
+                            <div class="avatar-option selected" data-avatar="🤖">🤖</div>
+                            <div class="avatar-option" data-avatar="🎓">🎓</div>
+                            <div class="avatar-option" data-avatar="📚">📚</div>
+                            <div class="avatar-option" data-avatar="💡">💡</div>
+                            <div class="avatar-option" data-avatar="🌟">🌟</div>
+                            <div class="avatar-option" data-avatar="🎯">🎯</div>
+                            <div class="avatar-option" data-avatar="📝">📝</div>
+                            <div class="avatar-option" data-avatar="🔍">🔍</div>
+                            <div class="avatar-option" data-avatar="🧠">🧠</div>
+                            <div class="avatar-option" data-avatar="💎">💎</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>描述</label>
+                        <textarea id="agentDesc" placeholder="描述你的智能体能做什么..." rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>知识领域</label>
+                        <div class="tag-input-container">
+                            <div class="tag-list" id="agentTags"></div>
+                            <input type="text" id="agentTagInput" placeholder="输入标签后按回车添加">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>系统提示词</label>
+                        <textarea id="agentPrompt" placeholder="定义智能体的行为和角色..." rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>开场白</label>
+                        <input type="text" id="agentGreeting" placeholder="智能体的第一句话">
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="Modal.close('agentModal')">取消</button>
+                        <button type="submit" class="btn-primary">创建智能体</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="chatModal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <div class="chat-header-info">
+                    <span class="chat-avatar" id="chatAvatar">🤖</span>
+                    <div>
+                        <h2 id="chatAgentName">智能体</h2>
+                        <span class="chat-status">● 在线</span>
+                    </div>
+                </div>
+                <button class="modal-close" onclick="Modal.close('chatModal')">&times;</button>
+            </div>
+            <div class="modal-body chat-body">
+                <div class="chat-messages" id="chatMessages"></div>
+                <div class="chat-input-area">
+                    <input type="text" id="chatInput" placeholder="输入消息...">
+                    <button class="btn-primary" id="sendChatBtn">发送</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="postDetailModal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2>帖子详情</h2>
+                <button class="modal-close" onclick="Modal.close('postDetailModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="post-detail" id="postDetail"></div>
+                <div class="comment-section">
+                    <h3>评论 <span id="commentCount">(0)</span></h3>
+                    <div class="comment-input">
+                        <input type="text" id="commentInput" placeholder="写下你的评论...">
+                        <button class="btn-primary" id="submitComment">评论</button>
+                    </div>
+                    <div class="comments-list" id="commentsList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="notificationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>通知</h2>
+                <button class="modal-close" onclick="Modal.close('notificationModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="notification-list" id="notificationList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/core.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
